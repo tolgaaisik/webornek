@@ -1,0 +1,5 @@
+AnaSayfa:
+  path: /
+  controller: Symfony\Bundle\FrameworkBundle\Controller\TemplateController::templateAction
+  defaults:
+      template: 'AnaSayfa.html.twig'
