@@ -1,27 +1,53 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-	
+	<style>
+    a{
+      color: blue;
+    }
+    a:hover
+     {
+        color: white;
+        font-size: 20px;
+        background-color:black;
 
- 	
-
+    }
+    #first
+  {
+    width: 200px;
+    float: left;
+  }
+   #second
+  {
+    width: 200px;
+    float: left;
+  }
+</style>
   	<div>
   	 
-    	<h1>Bu bizim Ana sayfamız</h1>
+    	<h1>Ana Sayfa</h1>
    		 
 
-  	</div
-  	>
- 	<div class="logo"> <img  src="kolye.jpeg" width="300">
+
+ 	<div class="resim"  > <img  src="kolye.jpeg" id="first">
  		<h2>Gümüş Kolye</h2>
 			<li>925 Ayar Gümüş</li>
  			<li>Ücretsiz Kargo</li>
  			<li>Aynı Gün Kargo</li>
  			<li>2 Yıl Garanti</li>
  			<li>Kapıda Ödeme Seçeneği</li>
-			<a href="contact" class="btn">Sipariş </a>
+			<a href="kayit" class="btn">Sepete Ekle </a>
 	</div>
+  <div class="resim"> <img src="toler2.jpg" id="second">
+   <h2>Gümüş Bileklik</h2>
+      <li>925 Ayar Gümüş</li>
+      <li>Ücretsiz Kargo</li>
+      <li>Aynı Gün Kargo</li>
+      <li>2 Yıl Garanti</li>
+      <li>Kapıda Ödeme Seçeneği</li>
+        <a href="kayit" class="btn  ">Sepete Ekle </a>
+  </div>
 		
- 	
+ 	  </div>
  	
 {% endblock %}
