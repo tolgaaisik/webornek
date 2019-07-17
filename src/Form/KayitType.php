@@ -8,17 +8,19 @@ use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
+use Symfony\Component\Security\Core\Authorization;
+
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
-class ContactType extends AbstractType
+class KayitType extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-          ->add('name', TextType::class)
-          ->add('email', EmailType::class)
-          ->add('message', TextareaType::class)
-          ->add('Gonder', SubmitType::class)
+            ->add('KullaniciAdi', TextType::class)
+            ->add('Sifre', TextType::class)  
+            ->add('Email', EmailType::class)
+            ->add('Kayit Ol', SubmitType::class)
         ;
     }
 
