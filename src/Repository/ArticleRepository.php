@@ -1,11 +1,8 @@
 <?php
-
 namespace App\Repository;
-
 use App\Entity\Article;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Symfony\Bridge\Doctrine\RegistryInterface;
-
 /**
  * @method Article|null find($id, $lockMode = null, $lockVersion = null)
  * @method Article|null findOneBy(array $criteria, array $orderBy = null)
@@ -18,10 +15,9 @@ class ArticleRepository extends ServiceEntityRepository
     {
         parent::__construct($registry, Article::class);
     }
-
-    // /**
-    //  * @return Article[] Returns an array of Article objects
-    //  */
+//    /**
+//     * @return Article[] Returns an array of Article objects
+//     */
     /*
     public function findByExampleField($value)
     {
@@ -35,7 +31,6 @@ class ArticleRepository extends ServiceEntityRepository
         ;
     }
     */
-
     /*
     public function findOneBySomeField($value): ?Article
     {
