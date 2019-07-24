@@ -1,13 +1,16 @@
- <?php
-
-namespace App\Controller;
-
+<?php
+namespace App\Controller ;
+use App\Entity\Article;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\Form\Extension\Core\Type\SubmitType;
+use Symfony\Component\Form\Extension\Core\Type\TextType;
+use Symfony\Component\Form\Extension\Core\Type\TextareaType;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
-use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\Routing\Annotation\Route;
-
-class ArticleController extends Controller {
-  /**
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
+class ArticleController extends AbstractController {
+ /*
    * @Route("/article", name="article")
    */
   public function article(){
@@ -16,5 +19,4 @@ class ArticleController extends Controller {
       ('articles' => $articles));
   }
 }
-  }
-}
+  
