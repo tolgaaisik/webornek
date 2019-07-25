@@ -1,29 +1,24 @@
 {% extends 'base.html.twig' %}
 
-{% block title%} Articles {% endblock %}
+{% block title%} Articles {% endblock title %}
 
 {% block body %}
 
   {% if articles %}
     <table class="table table-striped">
-      <thead>
-        <tr>
-          <th>Article Title</th>
-          <th>Actions</th>
-        </tr>
-      </thead>
+      
       <tbody>
-        {%  for article in articles %}
+        {%  for articles in articles %}
           <tr>
-            <td>{{ article.title }}</td>
+            <td>{{ articles.title }}</td>
             <td>
-              <a href="/article/{{ article.id }}" class="btn btn-dark">Show</a>
+              <a href="/articles/{{ articles.id }}" class="btn btn-dark">Show</a>
             </td>
             <td>
-              <a href="/article/update/{{ article.id }}" class="btn btn-info">Update</a>
+              <a href="/articles/update/{{ articles.id }}" class="btn btn-info">Update</a>
             </td>
             <td>
-              <a href="/article/delete/{{ article.id }}" class="btn btn-danger">Delete</a>
+              <a href="/articles/delete/{{ articles.id }}" class="btn btn-danger">Delete</a>
             </td>
           </tr>
         {% endfor %}
